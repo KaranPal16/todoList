@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-height:100vh;
+    width: 100%;
+    background-color:#1B4242 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.heading{
+    height: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+}
+.heading h2{
+    font-size: 30px;
+    font-weight: 900; 
+}
+.heading img{
+   height: 2.3rem;
+   width: 2rem;
+}
+.todoBox{
+    padding: 2rem;
+    min-width: 40%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.inputbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 2px gray;
+    border-radius: 20px;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.inputbox input{
+    flex: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 1rem;
+}
+.inputbox button{
+    text-align:center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 2px gray;
+    background-color: #8ACDD7;
+    color: #fff;
+    border-radius: 20px;
+    padding: .3rem;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 20px;
+
+}
+.list li{
+    width: 100%;
+    list-style: none;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    background-color: #8ACDD7;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    position: relative;
+    padding-right: 1rem;
+
+}
+.list li::before{
+   content: "";
+   position: absolute;
+   left: -30px;
+   top: 20%;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   border: 1px solid gray;
+}
+.list li.active::before{
+   content: "";
+   position: absolute;
+   left: -30px;
+   top: 20%;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   background-image: url(./image/check.png);
+   background-position: center;
+   background-size: cover;
+}
+.list li.active{
+    text-decoration: line-through;
+    background-color: #B6BBC4;
+    /* border: 3px solid #8ACDD7; */
+}
+.list li i{
+    position: absolute;
+    top: 30%;
+    right: 3%;
+}
